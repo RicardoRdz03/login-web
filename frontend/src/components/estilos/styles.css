@@ -1,0 +1,17 @@
+#fondo {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url(/fondo.jpg);
+
+  background-position: center;
+  background-size: cover;
+}
+
+#card {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8));
+}
+
+#blur {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6));
+  backdrop-filter: blur(8px);
+  height: 100vh;
+}
