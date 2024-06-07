@@ -11,9 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "",
+  host: "mysql-ricardo-web.alwaysdata.net",
+  user: "358044",
+  password: "Rickardo2903.",
   database: "login",
 });
 

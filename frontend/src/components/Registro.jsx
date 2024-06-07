@@ -21,7 +21,7 @@ export default function Registro() {
       return; // Detener el proceso de registro si falta algún campo
     }
 
-    Axios.post("http://localhost:3001/registrar", {
+    Axios.post("https://login-web-e84p.onrender.com/registrar", {
       nombre: nombre,
       paterno: paterno,
       materno: materno,

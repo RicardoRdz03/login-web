@@ -15,7 +15,10 @@ function Login({ setLoggedUser }) {
   const navigate = useNavigate();
 
   const iniciarSesion = () => {
-    Axios.post("http://localhost:3001/login", { usuario, contraseña })
+    Axios.post("https://login-web-e84p.onrender.com/login", {
+      usuario,
+      contraseña,
+    })
       .then((response) => {
         localStorage.setItem("token", response.data.token);
         setLoggedUser(usuario);
