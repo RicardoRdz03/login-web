@@ -26,3 +26,10 @@
 #negritas {
   font-weight: bolder !important;
 }
+
+#titulo {
+  font-weight: bolder !important;
+  background: -webkit-linear-gradient(#537be9, #a662c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

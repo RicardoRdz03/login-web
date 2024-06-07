@@ -31,6 +31,7 @@ function Principal({ loggedUser }) {
         </NavbarBrand>
 
         <NavbarContent as="div" justify="end">
+          {loggedUser}
           <Dropdown placement="bottom-end">
             <DropdownTrigger>
               <Avatar
@@ -67,12 +68,15 @@ function Principal({ loggedUser }) {
         style={{ height: "90vh" }}
       >
         <div>
-          <h1 id="negritas" className="text-6xl text-center">
+          <h1
+            id="negritas"
+            className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-5xl  text-center"
+          >
             Bienvenido a la página principal
           </h1>
         </div>
         <div className="mt-8">
-          <p className="text-2xl text-center">{loggedUser}</p>
+          <p className="text-base text-center">{loggedUser}</p>
         </div>
       </div>
     </>

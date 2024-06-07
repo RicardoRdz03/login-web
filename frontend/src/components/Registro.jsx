@@ -55,20 +55,19 @@ export default function Registro() {
         <div id="blur">
           <div className="flex items-center justify-center min-h-screen">
             <div className="w-11/12 sm:w-11/12 md:4/6 lg:w-2/6 xl:w-2/6">
-              <div id="card" className="rounded-lg px-3 py-4">
-                <div className="flex justify-center">
-                  <h1 id="titulo" className="text-3xl font-bold">
-                    REGISTRO
-                  </h1>
-                </div>
-                <div className="flex justify-center my-6">
-                  <h2 className="text-xl text-center">DATOS PERSONALES</h2>
-                </div>
-                <Divider />
+              <div className="flex justify-center">
+                <h1 id="titulo" className="text-3xl font-bold">
+                  REGISTRO
+                </h1>
+              </div>
+              <div className="flex justify-center my-6">
+                <h2 className="text-xl text-center">DATOS PERSONALES</h2>
+              </div>
+              <Divider />
+              <form>
                 <div className="mt-6 flex justify-center grid grid-cols-2 gap-2">
                   <div className="col-span-2">
                     <Input
-                      variant="bordered"
                       value={nombre}
                       onChange={(event) => {
                         setNombre(event.target.value);
@@ -81,7 +80,6 @@ export default function Registro() {
                   </div>
                   <div className="col-span-1">
                     <Input
-                      variant="bordered"
                       value={paterno}
                       onChange={(event) => {
                         setPaterno(event.target.value);
@@ -94,7 +92,6 @@ export default function Registro() {
                   </div>
                   <div className="col-span-1">
                     <Input
-                      variant="bordered"
                       value={materno}
                       onChange={(event) => {
                         setMaterno(event.target.value);
@@ -117,7 +114,6 @@ export default function Registro() {
                   </div>
                   <div className="col-span-1">
                     <Input
-                      variant="bordered"
                       value={usuario}
                       onChange={(event) => {
                         setUsuario(event.target.value);
@@ -131,7 +127,11 @@ export default function Registro() {
 
                   <div className="col-span-1">
                     <Input
-                      variant="bordered"
+                      onKeyUp={(e) => {
+                        if (e.key == "Enter") {
+                          registrar();
+                        }
+                      }}
                       value={contraseña}
                       onChange={(event) => {
                         setContraseña(event.target.value);
@@ -162,12 +162,12 @@ export default function Registro() {
                     Registrar
                   </Button>
                 </div>
-                <div className="text-center mt-3 text-sm">
-                  <p>Si ya cuentas con usuario y contraseña</p>
-                </div>
-                <div className="text-center text-sm">
-                  <a href="/">Haz clic aquí</a>
-                </div>
+              </form>
+              <div className="text-center mt-3 text-sm">
+                <p>Si ya cuentas con usuario y contraseña</p>
+              </div>
+              <div className="text-center text-sm">
+                <a href="/">Haz clic aquí</a>
               </div>
             </div>
           </div>

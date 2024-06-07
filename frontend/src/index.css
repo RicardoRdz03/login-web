@@ -12,9 +12,3 @@
 body {
   background-color: rgb(26, 31, 39);
 }
-
-#titulo {
-  background: -webkit-linear-gradient(#537be9, #a662c5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
