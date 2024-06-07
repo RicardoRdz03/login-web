@@ -72,7 +72,7 @@ function Principal({ loggedUser }) {
           </h1>
         </div>
         <div className="mt-8">
-          <p className="text-2xl">{loggedUser}</p>
+          <p className="text-2xl text-center">{loggedUser}</p>
         </div>
       </div>
     </>
