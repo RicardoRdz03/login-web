@@ -14,7 +14,7 @@ const db = mysql.createConnection({
   host: "mysql-ricardo-web.alwaysdata.net",
   user: "358044",
   password: "Rickardo2903.",
-  database: "login",
+  database: "ricardo-web_login",
 });
 
 db.connect((err) => {
