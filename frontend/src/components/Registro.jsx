@@ -158,9 +158,15 @@ export default function Registro() {
                   </div>
                 </div>
                 <div className="flex justify-center mt-8">
-                  <Button onClick={registrar} color="secondary" variant="ghost">
+                  <Button onClick={registrar} color="secondary">
                     Registrar
                   </Button>
+                </div>
+                <div className="text-center mt-3 text-sm">
+                  <p>Si ya cuentas con usuario y contraseña</p>
+                </div>
+                <div className="text-center text-sm">
+                  <a href="/">Haz clic aquí</a>
                 </div>
               </div>
             </div>

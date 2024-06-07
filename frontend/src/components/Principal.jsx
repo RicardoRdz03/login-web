@@ -15,7 +15,7 @@ import {
   Avatar,
 } from "@nextui-org/react";
 
-function Principal() {
+function Principal({ loggedUser }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -45,19 +45,35 @@ function Principal() {
             </DropdownTrigger>
             <DropdownMenu aria-label="Profile Actions" variant="flat">
               <DropdownItem key="profile" className="h-14 gap-2">
-                <p className="font-semibold">Sesión iniciada como</p>
-                <p className="font-semibold">zoey@example.com</p>
+                <p className="font-semibold text-center">Bienvenido</p>
+                <p className="font-semibold text-center">{loggedUser}</p>
               </DropdownItem>
 
-              <DropdownItem key="logout" color="danger">
+              <DropdownItem
+                onClick={handleLogout}
+                key="logout"
+                color="danger"
+                className="text-center"
+              >
                 Cerrar Sesión
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </NavbarContent>
       </Navbar>
-      <div id="" className="h-screen">
-        <Button onClick={handleLogout}>Cerrar sesión</Button>
+      <div
+        id="fondo2"
+        className=" flex justify-center items-center flex-col"
+        style={{ height: "90vh" }}
+      >
+        <div>
+          <h1 id="negritas" className="text-6xl text-center">
+            Bienvenido a la página principal
+          </h1>
+        </div>
+        <div className="mt-8">
+          <p className="text-2xl">{loggedUser}</p>
+        </div>
       </div>
     </>
   );

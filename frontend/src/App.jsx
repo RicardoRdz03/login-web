@@ -9,11 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Principal from "./components/Principal";
 
 function App() {
-  return (
-    <>
-    Hola
-    </>
-  );
+  return <></>;
 }
 
 export default App;

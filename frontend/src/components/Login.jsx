@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 import "./estilos/styles.css";
 
-function Login() {
+function Login({ setLoggedUser }) {
   const [isVisible, setIsVisible] = React.useState(false);
 
   const toggleVisibility = () => setIsVisible(!isVisible);
@@ -18,6 +18,7 @@ function Login() {
     Axios.post("http://localhost:3001/login", { usuario, contraseña })
       .then((response) => {
         localStorage.setItem("token", response.data.token);
+        setLoggedUser(usuario);
         alert("Login exitoso");
         navigate("/main");
       })
@@ -66,9 +67,9 @@ function Login() {
                           onClick={toggleVisibility}
                         >
                           {isVisible ? (
-                            <i className="fi fi-rs-crossed-eye text-2xl text-default-400 pointer-events-none"></i>
+                            <i className="bi bi-eye-slash text-2xl text-default-400 pointer-events-none"></i>
                           ) : (
-                            <i className="fi fi-rr-eye text-2xl text-default-400 pointer-events-none"></i>
+                            <i className="bi bi-eye text-2xl text-default-400 pointer-events-none"></i>
                           )}
                         </button>
                       }
@@ -78,7 +79,9 @@ function Login() {
                   </div>
                 </div>
                 <div className="flex justify-center mt-8">
-                  <Button onClick={iniciarSesion}>Iniciar sesión</Button>
+                  <Button color="secondary" onClick={iniciarSesion}>
+                    Iniciar sesión
+                  </Button>
                 </div>
                 <div className="flex justify-center mt-8">
                   <p>¿No puedes iniciar sesión?</p>

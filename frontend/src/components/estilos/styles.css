@@ -15,3 +15,14 @@
   backdrop-filter: blur(8px);
   height: 100vh;
 }
+
+#fondo2 {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url(/fondo2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#negritas {
+  font-weight: bolder !important;
+}
