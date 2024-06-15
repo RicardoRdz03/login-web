@@ -75,6 +75,16 @@ app.post("/login", (req, res) => {
   );
 });
 
+app.get("/prueba", (req, res) => {
+  db.query("SELECT * FROM usuarios", (err, result) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+    } else {
+      res.status(200).json(result);
+    }
+  });
+});
+
 const PORT = 3001;
 
 app.listen(PORT, () => {
